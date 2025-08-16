@@ -21,9 +21,9 @@ body {
   background: rgba(254, 254, 254, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  z-index: 1000;
   padding: 1.5rem 2rem;
   transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .nav {
@@ -37,7 +37,7 @@ body {
 .logo {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #6a38179a;
   letter-spacing: -0.02em;
 }
 
@@ -45,6 +45,7 @@ body {
   display: flex;
   list-style: none;
   gap: 3rem;
+  z-index: 1000;
 }
 
 .nav-links a {
@@ -103,14 +104,14 @@ body {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   margin-bottom: 2rem;
-  color: #1a1a1a;
+  color: #6a38179a;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
 
 .hero-description {
   font-size: 1.1rem;
-  color: #666;
+  color: brown;
   margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
@@ -123,7 +124,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: #1a1a1a;
+  background: #d4847a;
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -158,18 +159,18 @@ body {
 
 /* セクション共通 */
 .section {
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .section-subtitle {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #d4847a;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -180,7 +181,7 @@ body {
 .section-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: #1a1a1a;
+  color: #d4847a;
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
@@ -196,6 +197,7 @@ body {
 /* About セクション */
 .about {
   background: #f8f8f8;
+  min-height: 100vh;
 }
 
 .about-content {
@@ -217,6 +219,7 @@ body {
   font-size: 1rem;
   line-height: 1.8;
   color: #444;
+  white-space: pre-line;
 }
 
 .about-text p {
@@ -234,6 +237,10 @@ body {
 
 .profile-image {
   margin-bottom: 1.5rem;
+  img {
+    border-radius: 50%;
+    width: 80%;
+  }
 }
 
 .profile-placeholder {
@@ -302,6 +309,18 @@ body {
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.experience-badge {
+  background: linear-gradient(135deg, #d4847a, #e8a085);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: auto;
+  box-shadow: 0 2px 8px rgba(212, 132, 122, 0.3);
 }
 
 .tech-icon {
@@ -399,6 +418,11 @@ body {
   color: #666;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+
+  ul {
+    list-style-type: circle;
+    padding-left: 20px;
+  }
 }
 
 .work-tech {
@@ -416,15 +440,85 @@ body {
   font-weight: 500;
 }
 
-/* Contact セクション */
-.contact {
-  background: #1a1a1a;
-  color: white;
-  text-align: center;
+/* 円グラフ用スタイル */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin: 2rem auto;
 }
 
-.contact .section-subtitle {
-  color: #d4847a;
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Tools用スタイル */
+.tool-category {
+  grid-column: 1 / -1; /* 全幅を使用 */
+  width: 100%;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.tool-item {
+  /* background: linear-gradient(135deg, #f4d4c7 0%, #d4847a 100%); */
+  color: black;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  /* box-shadow: 0 4px 12px rgba(212, 132, 122, 0.3); */
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tool-icon {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.tool-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.1rem;
+}
+
+.tool-comment {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.desk-grid {
+  display: flex;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  img {
+    border-radius: 16px;
+  }
+}
+
+.desk-description {
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* Contact セクション */
+.contact {
+  background: #6a38179a;
+  color: white;
+  text-align: center;
 }
 
 .contact .section-title {
@@ -447,10 +541,9 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: transparent;
+  background: #d4847a;
   color: white;
   text-decoration: none;
-  border: 1px solid #333;
   border-radius: 50px;
   transition: all 0.3s ease;
   font-weight: 500;
@@ -490,14 +583,77 @@ body {
   transform: translateY(0);
 }
 
+/* モバイルメニュー */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  position: relative;
+}
+
+.mobile-menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 /* レスポンシブ */
 @media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+
   .nav-links {
-    gap: 1.5rem;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(254, 254, 254, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 0.8;
+    visibility: visible;
+  }
+
+  .nav-links li {
+    text-align: center;
   }
 
   .nav-links a {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem;
   }
 
   .hero {
@@ -513,6 +669,12 @@ body {
     gap: 3rem;
   }
 
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   .profile-placeholder {
     width: 200px;
     height: 200px;
@@ -526,6 +688,11 @@ body {
 
   .tech-category {
     padding: 2rem;
+  }
+
+  .desk-grid {
+    align-items: center;
+    flex-direction: column;
   }
 
   .works-grid {
@@ -550,4 +717,8 @@ body {
   .section {
     padding: 4rem 1rem;
   }
+}
+
+.mt-2 {
+  margin-top: 20px;
 }
