@@ -462,18 +462,16 @@ body {
 
 .tool-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 0.5rem;
   margin-top: 2rem;
 }
 
 .tool-item {
-  /* background: linear-gradient(135deg, #f4d4c7 0%, #d4847a 100%); */
   color: black;
-  padding: 1.2rem;
+  padding: 0.8rem;
   border-radius: 12px;
   text-align: center;
-  /* box-shadow: 0 4px 12px rgba(212, 132, 122, 0.3); */
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -492,7 +490,7 @@ body {
 }
 
 .tool-comment {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   opacity: 0.9;
   font-weight: 400;
   line-height: 1.2;
@@ -506,6 +504,7 @@ body {
 
   img {
     border-radius: 16px;
+    width: 100%;
   }
 }
 
