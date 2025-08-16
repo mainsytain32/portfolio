@@ -17,6 +17,11 @@
     <header class="header">
       <nav class="nav">
         <div class="logo">Mai Igarashi</div>
+        <button class="mobile-menu-btn" aria-label="メニュー">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#technologies">Technologies</a></li>
@@ -29,7 +34,7 @@
     <section class="hero">
       <div class="hero-content">
         <p class="hero-subtitle">Frontend & Backend Engineer</p>
-        <h1>五十嵐 麻衣</h1>
+        <h1>Mai Igarashi</h1>
         <a href="#works" class="hero-cta">
           <span>View Works</span>
           <span>→</span>
@@ -37,61 +42,44 @@
       </div>
 
       <div class="scroll-indicator">
-        nde<div class="scroll-line"></div>
+        <div class="scroll-line"></div>
         <span>Scroll</span>
       </div>
     </section>
 
     <section id="about" class="section about">
       <div class="section-header">
-        <p class="section-subtitle">About Me</p>
-        <p class="section-description">
-          フロントエンドとバックエンドの技術を通じて、価値あるプロダクトを生み出しています。
-        </p>
+        <h2 class="section-title">About Me</h2>
       </div>
 
       <div class="about-content fade-in">
         <div class="about-text">
-          <h3 class="about-intro-title">こんにちは</h3>
-          <p>
-            フロントエンドからバックエンドまで幅広い技術領域をカバーし、
-            <span class="about-highlight">ユーザー体験を第一に考えた開発</span
-            >を心がけています。
-          </p>
-          <p>
-            Ruby on Rails、Laravel、Angular、Flutterなどの技術を駆使して、
-            Webアプリケーションからモバイルアプリまで、様々なプラットフォームでの
-            開発経験を積んできました。
-          </p>
-          <p>
-            単なる実装ではなく、<span class="about-highlight"
-              >ビジネス価値を生み出す技術的解決策</span
-            >を 提供することを目指しています。現在も新しい技術に挑戦しながら、
-            より良いユーザー体験の提供を追求しています。
-          </p>
-          <p>
-            コードを書くことで、人々の暮らしをより豊かにしていきたいと考えています。
-          </p>
+          2016年にスタートアップの受託開発会社へ新卒で入社し、エンジニアキャリアをスタート。
+          2018年からはフリーランスとして活動しています。 Ruby on
+          Rails、Laravel、Angular、Flutter などを使用した実務経験を積み、<span
+            class="about-highlight"
+            >フロントエンド、バックエンド</span
+          >の開発に携わってきました。
+
+          <span class="about-highlight"> 要件定義、設計から開発、運用保守</span
+          >まで、プロジェクトの幅広い工程に対応できることが強みです。
+          また、プライベートでは整理収納アドバイザーの資格を保有し、「すっきりとした暮らし」をテーマに整理整頓や断捨離を楽しんでいます。
+          この「整理整頓」の思考は、コードの可読性や保守性にも活かせそうだな？と思ったりしています。
+          現在は一児の母として、子育てとエンジニア業を両立しています。
         </div>
 
         <div class="about-image-container">
           <div class="profile-image">
-            <div class="profile-placeholder">
-              <span>👩‍💻</span>
-            </div>
+            <img src="images/profile.png" />
           </div>
-          <div class="image-caption">
-            <p>Mai Igarashi</p>
-            <p>Frontend & Backend Engineer</p>
-          </div>
+          <div class="image-caption"></div>
         </div>
       </div>
     </section>
 
     <section id="technologies" class="section technologies">
       <div class="section-header">
-        <p class="section-subtitle">Technologies</p>
-        <h2 class="section-title">Core Skills</h2>
+        <h2 class="section-title">Technologies</h2>
         <p class="section-description">
           これまでに習得した技術スタックと、それぞれの経験領域をご紹介します。
         </p>
@@ -104,27 +92,11 @@
             <h3>Backend Development</h3>
           </div>
           <p class="tech-description">
-            サーバーサイドの設計から実装まで、スケーラブルなバックエンドシステムを構築します。
+            要件定義、設計から開発、運用保守までの幅広い工程を対応いたします。
+            フロントエンド知識も活かしたAPIの開発なども対応できることが強みです。
           </p>
-          <div class="tech-skills">
-            <div class="skill-item">
-              <div class="skill-name">Ruby on Rails</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">Laravel</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">MySQL</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 75%"></div>
-              </div>
-            </div>
+          <div class="chart-container">
+            <canvas id="backendChart"></canvas>
           </div>
         </div>
 
@@ -134,27 +106,12 @@
             <h3>Frontend Development</h3>
           </div>
           <p class="tech-description">
-            ユーザーインターフェースの設計と実装で、直感的で美しいユーザー体験を創造します。
+            Bootstrap、Material
+            Design、FlexLayoutなどを使用した効率的なUI開発と、柔軟なレスポンシブデザインで、
+            保守性と拡張性を兼ね備えたフロントエンドシステムを構築します。
           </p>
-          <div class="tech-skills">
-            <div class="skill-item">
-              <div class="skill-name">HTML/CSS</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">Angular</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-name">JavaScript</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 80%"></div>
-              </div>
-            </div>
+          <div class="chart-container">
+            <canvas id="frontendChart"></canvas>
           </div>
         </div>
 
@@ -164,26 +121,112 @@
             <h3>Mobile Development</h3>
           </div>
           <p class="tech-description">
-            クロスプラットフォーム対応のモバイルアプリケーション開発で、幅広いユーザーにリーチします。
+            モバイルの実務経験はまだ少ないですが、個人開発を通じて積極的に学習中です。
+            今後は実務での経験も積み、より幅広い開発領域に対応していきたいと考えています。
           </p>
-          <div class="tech-skills">
-            <div class="skill-item">
-              <div class="skill-name">Flutter</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 70%"></div>
-              </div>
+          <div class="chart-container">
+            <canvas id="mobileChart"></canvas>
+          </div>
+        </div>
+
+        <div class="tech-category fade-in tool-category">
+          <div class="tech-category-header">
+            <div class="tech-icon">🛠️</div>
+            <h3>Tools & Environment</h3>
+          </div>
+          <p class="tech-description">
+            開発効率を向上させてくれるお気に入りのツールと自宅のデスクをご紹介します。
+          </p>
+          <div class="tool-grid">
+            <div class="tool-item">
+              <div class="tool-name">GitHub</div>
+              <img src="images/logo/github.svg" />
+              <div class="tool-comment">必須</div>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Mobile UI/UX</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 75%"></div>
-              </div>
+            <div class="tool-item">
+              <div class="tool-name">VS Code</div>
+              <img src="images/logo/vscode.svg" />
+              <div class="tool-comment">メインエディタ</div>
             </div>
-            <div class="skill-item">
-              <div class="skill-name">Cross Platform</div>
-              <div class="skill-level">
-                <div class="skill-bar" style="width: 70%"></div>
+            <div class="tool-item">
+              <div class="tool-name">vim</div>
+              <img src="images/logo/vim.svg" />
+              <div class="tool-comment">キーバインド</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">JetBrains</div>
+              <div>
+                <img src="images/logo/rubymine.svg" width="40%" />
+                <img src="images/logo/webstorm.svg" width="40%" />
+                <img src="images/logo/phpstorm.svg" width="40%" />
               </div>
+              <div class="tool-comment">経費削減のため2025年で終了</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">iTerm2</div>
+              <img src="images/logo/iterm.png" />
+              <div class="tool-comment"></div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">zsh</div>
+              <img src="images/logo/zsh.svg" />
+              <div class="tool-comment"></div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Claude</div>
+              <img src="images/logo/claude.webp" />
+              <div class="tool-comment">日々感謝</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Cursor</div>
+              <img src="images/logo/cursor.webp" />
+              <div class="tool-comment">感動のAI開発</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Postman</div>
+              <img src="images/logo/postman.svg" />
+              <div class="tool-comment">API開発の必須アイテム</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Notion</div>
+              <img src="images/logo/notion.svg" />
+              <div class="tool-comment">情報整理</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Trello</div>
+              <img src="images/logo/trello.svg" />
+              <div class="tool-comment">プライベートでも大活躍</div>
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Slack</div>
+              <img src="images/logo/slack.png" />
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Teams</div>
+              <img src="images/logo/teams.svg" />
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">chatwork</div>
+              <img src="images/logo/chatwork.svg" />
+            </div>
+            <div class="tool-item">
+              <div class="tool-name">Canva</div>
+              <img src="images/logo/canva.svg" height="89px" />
+              <div class="tool-comment">デザイン作成</div>
+            </div>
+          </div>
+          <div class="desk-grid">
+            <div>
+              <img src="images/desktop.png" />
+            </div>
+            <div class="desk-description">
+              自宅のデスクは、白いガジェットで統一し、配線が目立たないようすっきりと整えることを意識しています。
+              特に購入してよかったのはergotron のシングルモニターアームです。
+              以前はデュアルモニターアームを使用していましたが、シングルに切り替えたことでモニターを机の奥に配置でき、圧迫感が減り、位置調整もしやすくなりました。
+              また、BenQのモニターライトもお気に入りのアイテムです。
+              最初は「モニターを照らして意味があるのか？」と思っていたのですが、暗めの部屋でも画面や周辺が見やすくなり、目の負担も軽減されているように感じます。
+              モニター上に設置できるため机周りがすっきりする点も気に入っています。
+              PCはMac miniを使用しており、机の裏側に設置することで配線が目立たず、お気に入りのデスク環境になっています。
             </div>
           </div>
         </div>
@@ -192,15 +235,14 @@
 
     <section id="works" class="section">
       <div class="section-header">
-        <p class="section-subtitle">Portfolio</p>
-        <h2 class="section-title">Selected Works</h2>
+        <p class="section-title">Works</p>
         <p class="section-description">
           これまでに手がけたプロジェクトの一部をご紹介します。
         </p>
       </div>
 
       <div class="works-grid">
-        <div class="work-card fade-in">
+        <!-- <div class="work-card fade-in">
           <div class="work-image">🌐</div>
           <div class="work-content">
             <h3 class="work-title">Corporate Website</h3>
@@ -215,21 +257,33 @@
               <span class="tech-tag">Responsive Design</span>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="work-card fade-in">
           <div class="work-image">💻</div>
           <div class="work-content">
             <h3 class="work-title">Web Application</h3>
-            <p class="work-description">
-              動的なコンテンツ管理が可能なWebアプリケーション。
-              管理画面とフロントエンドを統合設計しました。
-            </p>
+            <div class="work-description">
+              数ヶ月間の改修や機能追加のみの案件から、約5年間にわたる継続的な案件まで、状況に応じてさまざまな形でプロジェクトに参画してきました。
+              <div class="mt-2">
+                <p></p>
+                <ul>
+                  <li>LMSシステム</li>
+                  <li>セミナーの予約システム</li>
+                  <li>システムのリプレイス</li>
+                  <li>小規模なwebサービスの立ち上げ</li>
+                  <li>管理画面のみの作成</li>
+                  <li>APIの設計・作成</li>
+                </ul>
+              </div>
+            </div>
             <div class="work-tech">
+              <span class="tech-tag">Laravel</span>
               <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Javascript</span>
               <span class="tech-tag">Ruby on Rails</span>
               <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">API Design</span>
+              <span class="tech-tag">HTML/CSS</span>
             </div>
           </div>
         </div>
@@ -239,12 +293,13 @@
           <div class="work-content">
             <h3 class="work-title">Mobile Application</h3>
             <p class="work-description">
-              現在開発中のクロスプラットフォームアプリ。
-              ユーザー体験を重視したインターフェース設計に注力しています。
+              「レシピを保存してもすぐに見つからない」「調味料の分量を忘れた」など、日常の料理で感じていた
+              具体的な課題を解決するアプリを開発中です。エンジニア兼主婦の視点から、
+              本当に使いやすいレシピ管理ツールの実現を目指しています。
             </p>
             <div class="work-tech">
               <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Cross Platform</span>
+              <span class="tech-tag">Firebase</span>
               <span class="tech-tag">In Development</span>
             </div>
           </div>
@@ -254,10 +309,9 @@
 
     <section id="contact" class="section contact">
       <div class="section-header">
-        <p class="section-subtitle">Let's Connect</p>
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title">Contact</h2>
         <p class="section-description">
-          プロジェクトのご相談や技術的なお問い合わせなど、お気軽にご連絡ください。
+          プロジェクトのご相談など、お気軽にご連絡ください。
         </p>
       </div>
 
@@ -277,6 +331,7 @@
       </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
